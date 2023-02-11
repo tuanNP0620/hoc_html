@@ -1,0 +1,1 @@
+document.getElementById("lession_22_js_cach_2").innerHTML = "Inserted text: tuanconaaaaa"

@@ -10,7 +10,7 @@
     <title>đây là tiêu đề của 1 trang web</title>
 
     <style>
-        table {
+        /* table {
             width: 70%;
             border-collapse: collapse;
         }
@@ -18,17 +18,28 @@
             border: 1px solid white;
             text-align: left;
             padding: 15px;
-        }
+        } */
         /* hàng lẻ: odd*/
-        tr:nth-child(odd) {  
+        /* tr:nth-child(odd) {  
             background-color: yellowgreen;
             color: blue;
-        }
+        } */
         /* hàng chẵn : even*/
-        tr:nth-child(even) {
+        /* tr:nth-child(even) {
             background-color: goldenrod;
             color: white;
+        } */
+        .class-20 {
+            color: lightseagreen;
+            font-size: 20px;
+            font-weight: bold;
         }
+        #id-content01 {
+            color: #ff6348;
+        }
+        #id-content02 {
+            color: blue;
+        } 
     </style>
 </head>
 
@@ -194,7 +205,7 @@
 
     <!-- HTML Table -->
     <hr>
-    <h1>Lession 13</h1>
+    <h1>Lession 14</h1>
     <h1>HTML Table</h1>
 
     <table>
@@ -222,7 +233,140 @@
             <td>tuấn dev C#</td>
         </tr>
     </table>
+
+    <!-- HTML Tables - Colspan & Rowspan -->
+    <hr>
+    <h1>Lession 15</h1>
+    <h1>HTML Tables - Colspan & Rowspan</h1>
+    <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <td>NP Tuấn</td>
+            <td>NP Tuấn 1</td>
+            <td>NP Tuấn 2</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>nptuan0620@gmail.com</td>
+            <td>nptuan0620@gmail.com</td>
+            <td>nptuan0620@gmail.com</td>
+        </tr>
+
+        <tr>
+            <th>Youtube</th>
+            <td>tuấn dev C#</td>
+            <td>tuấn dev C#</td>
+            <td>tuấn dev C#</td>
+        </tr>
+    </table>
+
+    <!-- HTML Lists - Tạo Danh Sách trên trang web -->
+    <hr>
+    <h1>Lession 17</h1>
+    <h1>HTML Lists - Tạo Danh Sách trên trang web</h1>
+    <h3>Danh sách không sắp xếp</h3>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>
+    <h3>Danh sách có sắp xếp</h3>
+    <ol>
+        <li>Coffee</li>
+        <li>Water</li>
+        <li>Tea</li>
+        <li>Tea</li>
+        <li>Tea</li>
+        <li>Tea</li>
+    </ol>
+    <h3>Danh sách dạng mô tả</h3>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- Pure black</dd>
+
+        <dt>Tea</dt>
+        <dd>- Shan Tuyết</dd>
+
+        <dt>Water</dt>
+        <dd>nước lọc</dd>
+        <dd>nước đá</dd>
+
+    </dl>
+
+    <h3>Những danh sách lồng nhau</h3>
+    <ul>
+        <li>Coffee
+            <ul>
+                <li>Black</li>
+                <li>Bạc sỉu</li>
+            </ul>
+        </li>
+    </ul>
     
+    <!--HTML Lists - Tạo kiểu - Style cho Danh Sách -->
+    <hr>
+    <h1>Lession 18</h1>
+    <h1>HTML Lists - Tạo kiểu - Style cho Danh Sách</h1>
+    
+
+    <!-- HTML Block và Inline -->
+    <hr>
+    <h1>lession 19</h1>
+    <h1>HTML Block và Inline</h1>
+    <div>
+        block 01
+    </div>
+    <div>block 02</div>
+    <p>block 03</p>
+    
+    <span>inline 01</span>
+    <span>inline 02</span>
+    <code>inline 03</code>
+
+    <!-- inline không chứa block -->
+
+    <!-- HTML Class và Id -->
+    <hr>
+    <h1>Lession 20</h1>
+    <h1>HTML Class và Id</h1>
+    <div class = "class-20">Content class 01</div>
+    <div class = "class-20">Content class 02</div>
+    <div class = "class-20">Content class 03</div>
+
+    <div id = "id-content01">content Id 01</div>
+    <div id = "id-content02">content Id 02</div>
+    <div id = "id-content03">content Id 03</div>
+
+    <!-- HTML Iframe - Nhúng nội dung trang web -->
+    <hr>
+    <h1>Lession 21</h1>
+    <h1>HTML Iframe - Nhúng nội dung trang web</h1>
+    <iframe src="https://www.facebook.com/nptuan1506/" title="tcn fb"></iframe>
+
+    <!-- HTML JavaScript - Nhúng JavaScript vào trang web -->
+    <hr>
+    <h1>Lession 22</h1>
+    <h1>HTML JavaScript - Nhúng JavaScript vào trang web</h1>
+    <p>Cách 1: sử dụng JS trực tiếp trong thẻ HTML</p>
+    <button type="button" onclick="alert('tuancon1506')">Show alert</button>
+
+    <p><strong id = "lession_22_js_cach_2"></strong></p>
+    <script src="Lession22.js"></script>
 </body>
 
+    <script>
+        // DOM theo class
+        const class20 = document.getElementsByClassName("class-20")
+        
+        class20[0].style.color = "red"
+        // DOM theo ID
+        const idContent01 = document.getElementById("id-content01")
+        const idContent02 = document.getElementById("id-content02")
+        console.log(idContent01, idContent02)
+
+        idContent01.innerHTML = "thay đổi content."
+        idContent02.style.fontSize = '12px'
+
+        
+    </script>
 </html>
